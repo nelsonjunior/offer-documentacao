@@ -1,0 +1,48 @@
+@startuml Diagrama de Contexto
+skinparam roundCorner 20
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+' uncomment the following line and comment the first to use locally
+' !include C4_Context.puml
+
+LAYOUT_WITH_LEGEND()
+SHOW_PERSON_PORTRAIT()
+' LAYOUT_LEFT_RIGHT()
+' LAYOUT_TOP_DOWN()
+' LAYOUT_AS_SKETCH()
+
+title Offer - Sistema de Ofertas em Lojas Físicas
+
+Person(user, "Usuário", "Uma pessoa que realiza acesso em busca de ofertas.")
+Person(storeowner, "Lojista", "Lojista que realiza cadastro de offertas.")
+System(offer_system, "Web Site Offer", "Permite que o usuário visualize ofertas e realize pesquisa conforme seu interesse.")
+System(offer_admin_system, "Admin Site Offer", "Permite que o lojista faça gestão de ofertas para usuários.")
+
+System_Ext(mail_system, "Sistema de Notificação", "Sistema de notificação por e-mail ou SMS.")
+System_Ext(core_system, "Core System", "Armazenas informações referente as ofertas cadastradas e informações sobre acessos, usuários, etc.")
+System_Ext(search_system, "Seach System", "Realiza indexação para melhor experiência do usuário ao realizar pesquisa")
+System_Ext(cognito_system, "Amazon Cognito", "Sistema para autenticação e autorização de usuários")
+
+
+' Relacionamentos Lojista
+Rel(storeowner, offer_admin_system, "Lojistas")
+Rel_R(offer_admin_system, mail_system, "Envia notificação usando", "SMTP, SMS")
+Rel_Back(storeowner, mail_system, "Envia notificação para")
+Rel(offer_admin_system, core_system, "Cadastra e Publica ofertas")
+
+' Relacionamentos Usuários
+Rel_D(user, offer_system, "Usuários")
+Rel_L(offer_system, mail_system, "Envia notificação usando", "SMTP, SMS")
+Rel_Back(user, mail_system, "Envia notficação para")
+Rel(offer_system, search_system, "Recupera ofertas")
+
+' Ligações do sistema
+Rel_Neighbor(core_system, search_system, "Envia informações sobre ofertas para indexação")
+
+Rel(storeowner, cognito_system, "Cadastro e validação de credenciais")
+Rel(offer_admin_system, cognito_system, "Autorização e Autenticação")
+
+
+
+
+@enduml
