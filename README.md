@@ -1,29 +1,20 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Esse repositório contendo documentos referente ao projeto de conclusão da pós graduação em arquitetura de software distribuído pela PUC Minas.
 
-### What is this repository for? ###
+### Diagramas C4 Model
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+#### Contexto
 
-### How do I get set up? ###
+Diagrama representando o contexto da aplicação Offer
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+![alt text](./out/diagrama-contexto/DiagramadeContexto.png "Title")
 
-### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+#### Container
 
-### Who do I talk to? ###
+* Em elaboração
 
-* Repo owner or admin
-* Other community or team contact
+#### Component
+
+* Em elaboração
