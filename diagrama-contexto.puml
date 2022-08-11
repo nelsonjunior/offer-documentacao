@@ -23,7 +23,6 @@ System_Ext(core_system, "Core System", "Armazenas informações referente as ofe
 System_Ext(search_system, "Seach System", "Realiza indexação para melhor experiência do usuário ao realizar pesquisa")
 System_Ext(cognito_system, "Amazon Cognito", "Sistema para autenticação e autorização de usuários")
 
-
 ' Relacionamentos Lojista
 Rel(storeowner, offer_admin_system, "Lojistas")
 Rel_R(offer_admin_system, mail_system, "Envia notificação usando", "SMTP, SMS")
