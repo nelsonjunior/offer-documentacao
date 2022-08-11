@@ -7,7 +7,7 @@ jobs:
   plantuml:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: ts-graphviz/setup-graphviz@v1
       - name: Get changed UML files
         id: getfile
@@ -18,11 +18,12 @@ jobs:
           echo ${{ steps.getfile.outputs.files }}
       - run: wget --no-verbose https://downloads.sourceforge.net/project/plantuml/plantuml.jar
       - run: java -jar plantuml.jar -v -tpng ${{ steps.getfile.outputs.files }}
-      - name: Push Local Changes
-        uses:  stefanzweifel/git-auto-commit-action@v4.1.2 
-        with: 
-          commit_user_name: "Nelson Rodrigues"
-          commit_user_email: "nrsjnet@gmail.com"
-          commit_author: "Usuário <nrsjnet@gmail.com>"
-          commit_message: "Gerar SVG e PNG imagens dos diagramas PlantUML" 
-          branch: ${{ github.head_ref }}
+      - uses: EndBug/add-and-commit@v9
+        with:
+          message: 'generate PNG for PlantUML'
+          add: '*.png'
+          push: false
+      - uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
