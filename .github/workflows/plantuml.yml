@@ -23,7 +23,12 @@ jobs:
           message: 'generate PNG for PlantUML'
           add: '*.png'
           push: false
-      - uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+      
+      - name: Push Local Changes
+        uses:  stefanzweifel/git-auto-commit-action@v4.1.2 
+        with: 
+          commit_user_name: "Nelson Rodrigues"
+          commit_user_email: "nrsjnet@gmail.com"
+          commit_author: "Usuário <nrsjnet@gmail.com>"
+          commit_message: "Gerar SVG e PNG imagens dos diagramas PlantUML" 
+          branch: ${{ github.head_ref }}
