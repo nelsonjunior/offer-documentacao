@@ -27,7 +27,7 @@ Person(storeowner, "Lojista", "Lojista que realiza cadastro de offertas.")
 System_Boundary(c2, "Offer") {
     Container(website, "Web Site Offer", "Typecript, Angular", "Permite que os usuários visualizarem ofertas")
     Container(admin_website, "Admin Web Site Offer", "Typecript, Angular", "Permite que ao lojista cadastrar ofertas")
-
+    
     Container(cognito_service, "Amazon Cognito", "Amazon Cognito", "Prove mecanismo para autenticação e autorização")
 
     Container(api_gateway, "API Gateway", "Java", "Prove acesso aos serviços da aplicação via API", "server")
@@ -63,9 +63,6 @@ Rel_D(offer_service, kafka_broker, "Envia informações sobre cadastro de oferta
 
 Rel_U(kafka_broker, offer_service, "Ouve topico de metricas de ofertas")
 Rel_L(kafka_broker, search_service, "Ouve topico de cadastro de ofertas")
-
-
-
 
 SHOW_LEGEND()
 @enduml
