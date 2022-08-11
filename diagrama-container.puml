@@ -12,13 +12,12 @@
 !include DEVICONS/java.puml
 !include DEVICONS/msql_server.puml
 !include FONTAWESOME/server.puml
-!include FONTAWESOME/envelope.puml
 
 AddElementTag("microService", $shape=EightSidedShape(), $bgColor="CornflowerBlue", $fontColor="white", $legendText="micro service (eight sided)")
 AddElementTag("storage", $shape=RoundedBoxShape(), $bgColor="lightSkyBlue", $fontColor="white")
 
 SHOW_PERSON_OUTLINE()
- 
+
 title "Offer - Sistema de Ofertas em Lojas Físicas"
 
 Person(user, "Usuário", "Uma pessoa que realiza acesso em busca de ofertas.")
