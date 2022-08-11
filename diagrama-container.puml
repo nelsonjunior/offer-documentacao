@@ -1,0 +1,71 @@
+@startuml "DiagramaContainer"
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define DEVICONS2 https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons2
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+
+' uncomment the following line and comment the first to use locally
+' !include C4_Container.puml
+
+!include DEVICONS/angular.puml
+!include DEVICONS/dotnet.puml
+!include DEVICONS/java.puml
+!include DEVICONS/msql_server.puml
+!include FONTAWESOME/server.puml
+!include FONTAWESOME/envelope.puml
+
+AddElementTag("microService", $shape=EightSidedShape(), $bgColor="CornflowerBlue", $fontColor="white", $legendText="micro service (eight sided)")
+AddElementTag("storage", $shape=RoundedBoxShape(), $bgColor="lightSkyBlue", $fontColor="white")
+
+SHOW_PERSON_OUTLINE()
+
+title Offer - Sistema de Ofertas em Lojas Físicas
+
+Person(user, "Usuário", "Uma pessoa que realiza acesso em busca de ofertas.")
+Person(storeowner, "Lojista", "Lojista que realiza cadastro de offertas.")
+
+System_Boundary(c2, "Offer") {
+    Container(website, "Web Site Offer", "Typecript, Angular", "Permite que os usuários visualizarem ofertas")
+    Container(admin_website, "Admin Web Site Offer", "Typecript, Angular", "Permite que ao lojista cadastrar ofertas")
+
+    Container(cognito_service, "Amazon Cognito", "Amazon Cognito", "Prove mecanismo para autenticação e autorização")
+
+    Container(api_gateway, "API Gateway", "Java", "Prove acesso aos serviços da aplicação via API", "server")
+    Container(search_service, "Serviço de Pesquisa", "Java, Spring Boot", "Serviço para pesquisar de ofertas", $tags = "microService")
+    Container(offer_service, "Serviço de Ofertas", "Java, Spring Boot", "Serviço para manter informações de ofertas", $tags = "microService")
+    Container(metric_service, "Serviço de Metricas", "Java, Spring Boot", "Registra metricas de uma oferta (View, Shared, Likes e Dislikes)", $tags = "microService")
+    Container(kafka_broker, "Kafka Broker", "Kafka", "Recebe mensagens de eventos")
+    Container(search_store, "Search Store", "Amazon OpenSearch", "Armazena dados para pesquisa de ofertas", $tags = "storage")
+    ContainerDb(offer_db, "Offer Database", "Amazon DocumentDB", "Armazena dados da oferta", $tags = "storage")
+    ContainerDb(metric_db, "Metric Database", "Amazon DocumentDB", "Armazena dados referente a metricas de oferta", $tags = "storage")
+}
+
+Rel_D(user, website, "Uses", "HTTPS")
+Rel_D(storeowner, admin_website, "Uses", "HTTPS")
+Rel(storeowner, cognito_service, "Uses", "HTTPS")
+Rel_U(api_gateway, cognito_service, "Uses", "HTTPS")
+
+
+
+Rel_D(website, api_gateway, "Uses", "async, JSON/HTTPS")
+Rel_D(admin_website, api_gateway, "Uses", "async, JSON/HTTPS")
+
+Rel(api_gateway, search_service, "Obtém últimas ofertas", "async, JSON/HTTPS")
+Rel_D(api_gateway, offer_service, "Obtém detalhes e cadastra ofertas", "async, JSON/HTTPS")
+Rel_R(api_gateway, metric_service, "Obtém metricas da oferta", "async, JSON/HTTPS")
+
+Rel_L(search_service, search_store, "Armazena dados indexados para pesquisa de ofertas")
+Rel(offer_service, offer_db, "Armazena dados indexados para pesquisa de ofertas")
+Rel(metric_service, metric_db, "Armazena dados indexados para pesquisa de ofertas")
+
+Rel_D(metric_service, kafka_broker, "Envia informações sobre View, Shared, Likes e Dislikes de ofertas")
+Rel_D(offer_service, kafka_broker, "Envia informações sobre cadastro de ofertas")
+
+Rel_U(kafka_broker, offer_service, "Ouve topico de metricas de ofertas")
+Rel_L(kafka_broker, search_service, "Ouve topico de cadastro de ofertas")
+
+
+
+
+SHOW_LEGEND()
+@enduml
