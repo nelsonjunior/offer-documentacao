@@ -45,7 +45,6 @@ Rel_D(storeowner, admin_website, "Uses", "HTTPS")
 Rel(storeowner, cognito_service, "Uses", "HTTPS")
 Rel_U(api_gateway, cognito_service, "Uses", "HTTPS")
 
-
 Rel_D(website, api_gateway, "Uses", "async, JSON/HTTPS")
 Rel_D(admin_website, api_gateway, "Uses", "async, JSON/HTTPS")
 

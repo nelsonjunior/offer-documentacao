@@ -41,5 +41,4 @@ Rel_Neighbor(core_system, search_system, "Envia informações sobre ofertas para
 Rel(storeowner, cognito_system, "Cadastro e validação de credenciais")
 Rel(offer_admin_system, cognito_system, "Autorização e Autenticação")
 
-
 @enduml
