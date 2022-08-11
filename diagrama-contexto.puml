@@ -12,6 +12,7 @@ title "Offer - Sistema de Ofertas em Lojas Físicas"
 
 Person(user, "Usuário", "Uma pessoa que realiza acesso em busca de ofertas.")
 Person(storeowner, "Lojista", "Lojista que realiza cadastro de offertas.")
+
 System(offer_system, "Web Site Offer", "Permite que o usuário visualize ofertas e realize pesquisa conforme seu interesse.")
 System(offer_admin_system, "Admin Site Offer", "Permite que o lojista faça gestão de ofertas para usuários.")
 
