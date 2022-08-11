@@ -7,11 +7,8 @@ skinparam roundCorner 20
 
 LAYOUT_WITH_LEGEND()
 SHOW_PERSON_PORTRAIT()
-' LAYOUT_LEFT_RIGHT()
-' LAYOUT_TOP_DOWN()
-' LAYOUT_AS_SKETCH()
 
-title Offer - Sistema de Ofertas em Lojas Físicas
+title "Offer - Sistema de Ofertas em Lojas Físicas"
 
 Person(user, "Usuário", "Uma pessoa que realiza acesso em busca de ofertas.")
 Person(storeowner, "Lojista", "Lojista que realiza cadastro de offertas.")
