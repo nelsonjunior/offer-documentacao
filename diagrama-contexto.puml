@@ -1,4 +1,4 @@
-@startuml Diagrama de Contexto
+@startuml DiagramaContexto
 skinparam roundCorner 20
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
@@ -11,7 +11,6 @@ SHOW_PERSON_PORTRAIT()
 title "Offer - Sistema de Ofertas em Lojas Físicas"
 
 Person(user, "Usuário", "Uma pessoa que realiza acesso em busca de ofertas.")
-
 Person(storeowner, "Lojista", "Lojista que realiza cadastro de offertas.")
 
 System(offer_system, "Web Site Offer", "Permite que o usuário visualize ofertas e realize pesquisa conforme seu interesse.")

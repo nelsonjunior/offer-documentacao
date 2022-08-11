@@ -8,12 +8,14 @@ Esse repositório contendo documentos referente ao projeto de conclusão da pós
 
 Diagrama representando o contexto da aplicação Offer
 
-![alt text](./out/diagrama-contexto/DiagramadeContexto.png "Title")
+![alt text](./diagramas/DiagramaContexto.png "Title")
 
 
 #### Container
 
-* Em elaboração
+Diagrama representando os containers da aplicação Offer
+
+![alt text](./diagramas/DiagramaContainer.png "Title")
 
 #### Component
 
