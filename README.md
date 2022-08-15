@@ -19,4 +19,7 @@ Diagrama representando os containers da aplicação Offer
 
 #### Component
 
-* Em elaboração
+Diagrama representando os componentes da aplicação
+
+
+![alt text](./diagramas/DiagramaComponente.png "Title")
