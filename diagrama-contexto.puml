@@ -8,7 +8,9 @@ skinparam roundCorner 20
 LAYOUT_WITH_LEGEND()
 SHOW_PERSON_PORTRAIT()
 
-title "Offer - Sistema de Ofertas em Lojas Físicas"
+'title "Offer - Sistema de Ofertas em Lojas Físicas"
+
+title "Diagrama de Contexto"
 
 Person(user, "Usuário", "Uma pessoa que realiza acesso em busca de ofertas.")
 Person(storeowner, "Lojista", "Lojista que realiza cadastro de offertas.")

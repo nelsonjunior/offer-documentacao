@@ -18,7 +18,7 @@ AddElementTag("storage", $shape=RoundedBoxShape(), $bgColor="lightSkyBlue", $fon
 
 SHOW_PERSON_OUTLINE()
 
-title "Offer - Sistema de Ofertas em Lojas Físicas"
+title "Diagrama de Container"
 
 Person(user, "Usuário", "Uma pessoa que realiza acesso em busca de ofertas.")
 Person(storeowner, "Lojista", "Lojista que realiza cadastro de offertas.")
