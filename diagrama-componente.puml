@@ -5,16 +5,17 @@ title "Diagrama de Componentes"
 skinparam defaultTextAlignment center
 
 skinparam node {
-  borderColor Black
-  backgroundColor whitesmoke
+    borderColor Black
+    backgroundColor whitesmoke
 }
 
-[Aplicação Web\n<<Angular>>] as WebSite
-[Api Gateway] as ApiGateway
+package "Web Site" {
+    [SPA\n<<Angular>>] as WebSite
+    [Nebular\n<<Angular UI Kit>>] as Nebular
+}
 
-[SearchService\n<<Spring Boot>>] as SearchService
-[StoreService\n<<Spring Boot>>] as StoreService
-[MetricService\n<<Spring Boot>>] as MetricService
+
+interface "Open Search" as SearchInterface
 
 [Message Broker\n<<Kafka>>] as Kafka
 
@@ -25,47 +26,82 @@ database StoreDB <<MongoDB>> as StoreDB
 database MetricDB <<MongoDB>> as MetricDB
 
 
+[Api Gateway] as ApiGateway
+
+package "Search Service" {
+    [Spring Boot\n<<Rest API>>] as SearchService
+    [Offer Core\n<<Library>>] as SSCoreLibray
+
+    SearchService -down- SearchInterface
+    SearchService <..down.. Kafka : Consume Create/Update Offer
+    SearchInterface )-down- OpenSearch
+    SearchService -left-> SSCoreLibray : Use
+}
+
+package "Store Service" {
+    [Spring Boot\n<<Rest API>>] as StoreService
+    interface "Spring Data" as StorePersistence
+    [Offer Core\n<<Library>>] as StoreCoreLibray
+
+    StoreService --> StoreCoreLibray
+    StoreService <. Kafka : Consume Update Metrics
+    StoreService -left-> StorePersistence
+    StorePersistence .left.> StoreDB
+}
+
+package "Metric Service" {
+    [Spring Boot\n<<Rest API>>] as MetricService
+    interface "Spring Data" as MetricPersistence
+    [Offer Core\n<<Library>>] as MetricCoreLibray
+
+    MetricService --> MetricCoreLibray
+    MetricService .> Kafka : "Publish Update Metrics"
+    MetricService -right-> MetricPersistence
+    MetricPersistence .right.> MetricDB
+}
+
+ApiGateway ...> StoreService : HTTP
+ApiGateway .right.> MetricService : HTTP
+ApiGateway ...> SearchService : HTTP
+
+WebSite .down.> ApiGateway : \t\rUse
+WebSite ..right..> Cognito : Use
+WebSite ..left..> Nebular : Use
+
+
+' StoreService ..> Kafka : Use
+' MetricService ...> Kafka : Use
+
+
+' StoreService ...> StoreDB : Use
+' MetricService ..right..> MetricDB : Use
+
 ' interface HTTP as HttpInterface
 
 note top of WebSite
     Componente utilizado para gerar
     conteúdo HTML dos módulos
-    do sistema de forma responsiva  
+    do sistema de forma responsiva
 end note
 
-note left of ApiGateway
-    Api Gateway utilizado
-    para expor serviços da
-    aplicação via API
-end note
+' note right of ApiGateway
+'     Api Gateway utilizado
+'     para expor serviços da
+'     aplicação via API
+' end note
 
-note top of OpenSearch
+note right of OpenSearch
     É um serviço da Amazon
     para realizar pesquisa em grande
     volume de dados
 end note
 
-note right of Kafka
+note bottom of Kafka
     Broker de mensageria
     utilizado para publicação
     e consumo de mensagens
     entre os serviços
 end note
-
-WebSite ..> ApiGateway : \t\rUse
-WebSite ..left..> Cognito : Use
-
-ApiGateway ..> StoreService : Use
-ApiGateway ....> SearchService : Use
-ApiGateway ..right..> MetricService : Use
-
-
-StoreService ..> Kafka : Use
-MetricService ...> Kafka : Use
-
-SearchService ..left..> OpenSearch : Use
-StoreService ...> StoreDB : Use
-MetricService ..right..> MetricDB : Use
 
 
 @enduml
