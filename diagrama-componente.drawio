@@ -304,7 +304,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="96" value="«Library»&lt;br&gt;&lt;b&gt;Offer Core Library&lt;/b&gt;" style="html=1;dropTarget=0;" vertex="1" parent="1">
-                    <mxGeometry x="920" y="400" width="180" height="60" as="geometry"/>
+                    <mxGeometry x="930" y="400" width="180" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="97" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="96">
                     <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
