@@ -22,4 +22,4 @@ Diagrama representando os containers da aplicação Offer
 Diagrama representando os componentes da aplicação
 
 
-![alt text](./diagramas/DiagramaComponentes.png "Title")
+![alt text](./drawio-assets/diagrama-componente-Página-1.png "Title")
