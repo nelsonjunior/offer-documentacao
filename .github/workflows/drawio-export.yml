@@ -24,6 +24,7 @@ jobs:
           transparent: false
           output: drawio-assets
           remove-page-suffix: true
+          border: 1
 
       - name: Get author and committer info from HEAD commit
         uses: rlespinasse/git-commit-data-action@v1

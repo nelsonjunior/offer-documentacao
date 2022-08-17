@@ -172,7 +172,7 @@
                 </mxCell>
                 <mxCell id="92" value="Consumer update&lt;br&gt;metric" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="91">
                     <mxGeometry x="-0.6919" y="-2" relative="1" as="geometry">
-                        <mxPoint x="8" y="-13" as="offset"/>
+                        <mxPoint x="8" y="-19" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="106" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=classic;endFill=1;endSize=8;dashed=1;" edge="1" parent="1" source="64" target="94">
