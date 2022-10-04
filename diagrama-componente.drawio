@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="qgDWVo3OIS60Y67VkoNV" name="Página-1">
-        <mxGraphModel dx="1002" dy="550" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="1572" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="119" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; margin-left: 10px ; text-align: left&quot;&gt;&lt;b&gt;Diagrama de Componentes&lt;/b&gt;&lt;/p&gt;" style="html=1;strokeWidth=1;shape=mxgraph.sysml.package;html=1;overflow=fill;whiteSpace=wrap;labelX=219.74;" parent="1" vertex="1">
-                    <mxGeometry x="4" y="4" width="1160" height="820" as="geometry"/>
+                    <mxGeometry x="4" y="4" width="1160" height="966" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="Web Site" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" parent="1" vertex="1">
                     <mxGeometry x="130" y="39" width="480" height="200" as="geometry"/>
@@ -62,6 +62,18 @@
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="144" style="edgeStyle=none;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.853;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;" edge="1" parent="1" source="12" target="142">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="798" y="625"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="145" value="Use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="144">
+                    <mxGeometry x="0.7288" y="3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="12" value="«OAuth e JWT»&lt;br&gt;&lt;b&gt;AWS Cognito&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
                     <mxGeometry x="670" y="146" width="150" height="60" as="geometry"/>
                 </mxCell>
@@ -70,22 +82,10 @@
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" parent="1" source="17" target="12" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="745" y="289"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="21" value="Use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="20" vertex="1" connectable="0">
-                    <mxGeometry x="0.1561" y="-2" relative="1" as="geometry">
-                        <mxPoint x="-55" y="-10" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" parent="1" source="17" target="24" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="200" y="309"/>
+                            <mxPoint x="160" y="309"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -114,6 +114,34 @@
                         <mxPoint x="-11" y="-7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="158" style="edgeStyle=none;html=1;entryX=-0.003;entryY=0.339;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=-0.002;exitY=0.671;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;entryPerimeter=0;" edge="1" parent="1" source="17" target="149">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="360" y="320"/>
+                            <mxPoint x="360" y="670"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="162" value="Http" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="158">
+                    <mxGeometry x="-0.8714" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="164" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" target="152">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="550" y="288" as="sourcePoint"/>
+                        <mxPoint x="895" y="728" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="790" y="288"/>
+                            <mxPoint x="790" y="750"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="166" value="Http" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="164">
+                    <mxGeometry x="-0.8356" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="17" value="«Web API»&lt;br&gt;&lt;b&gt;API Gateway&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
                     <mxGeometry x="400" y="279" width="160" height="60" as="geometry"/>
                 </mxCell>
@@ -122,35 +150,14 @@
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="23" value="Metric Service" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" parent="1" vertex="1">
-                    <mxGeometry x="30" y="389" width="280" height="260" as="geometry"/>
-                </mxCell>
-                <mxCell id="29" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="24" target="27" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="210" y="529"/>
-                            <mxPoint x="210" y="529"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="68" value="Use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="29" vertex="1" connectable="0">
-                    <mxGeometry x="-0.2629" y="3" relative="1" as="geometry">
-                        <mxPoint x="11" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="66" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=classic;endFill=1;endSize=8;dashed=1;" parent="1" source="24" target="64" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="67" value="Publish update&lt;br&gt;metric" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="66" vertex="1" connectable="0">
-                    <mxGeometry x="0.1646" y="-2" relative="1" as="geometry">
-                        <mxPoint x="-28" y="-110" as="offset"/>
-                    </mxGeometry>
+                <mxCell id="23" value="Upload Functions" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="410" width="280" height="239" as="geometry"/>
                 </mxCell>
                 <mxCell id="71" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=classic;endFill=1;endSize=8;" parent="1" source="24" target="69" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="120" y="529"/>
-                            <mxPoint x="120" y="529"/>
+                            <mxPoint x="110" y="600"/>
+                            <mxPoint x="110" y="600"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -159,42 +166,33 @@
                         <mxPoint x="-15" y="-10" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="24" value="«Spring Boot»&lt;br&gt;&lt;b&gt;Microservice&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="449" width="180" height="60" as="geometry"/>
+                <mxCell id="24" value="«Lambda»&lt;br&gt;&lt;b&gt;GET URL Signed&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="470" width="150" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="24" vertex="1">
                     <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="27" value="«Library»&lt;br&gt;&lt;b&gt;Offer Core Library&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
-                    <mxGeometry x="140" y="559" width="140" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="28" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="27" vertex="1">
-                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
-                        <mxPoint x="-27" y="7" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="91" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=classic;endFill=1;endSize=8;" parent="1" edge="1">
+                <mxCell id="91" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=none;endFill=0;endSize=8;exitX=1.003;exitY=0.093;exitDx=0;exitDy=0;startArrow=classic;startFill=1;exitPerimeter=0;" parent="1" edge="1" source="124">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="430" y="743.0000000000001" as="sourcePoint"/>
                         <mxPoint x="550" y="493" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="450" y="743"/>
+                            <mxPoint x="450" y="806"/>
                             <mxPoint x="450" y="493"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="92" value="Consumer update&lt;br&gt;metric" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="91" vertex="1" connectable="0">
+                <mxCell id="92" value="Consumer &lt;br&gt;complete offer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="91" vertex="1" connectable="0">
                     <mxGeometry x="-0.6919" y="-2" relative="1" as="geometry">
-                        <mxPoint x="8" y="-19" as="offset"/>
+                        <mxPoint x="48" y="-71" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="106" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=classic;endFill=1;endSize=8;dashed=1;" parent="1" source="64" target="94" edge="1">
+                <mxCell id="106" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=classic;endFill=1;endSize=8;dashed=1;" parent="1" source="124" target="94" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="350" y="799"/>
-                            <mxPoint x="900" y="799"/>
+                            <mxPoint x="870" y="830"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -203,7 +201,15 @@
                         <mxPoint x="-59" y="-12" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="64" value="«Message Broker»&lt;br&gt;&lt;b&gt;Apache Kafka&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
+                <mxCell id="126" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="64" target="124">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="Publish" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="126">
+                    <mxGeometry x="-0.1707" y="-2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="64" value="«Notification Service»&lt;br&gt;&lt;b&gt;SNS&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
                     <mxGeometry x="270" y="699" width="160" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="65" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="64" vertex="1">
@@ -211,16 +217,19 @@
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="69" value="«Banco de Dados»&lt;br&gt;&lt;b&gt;Document DB&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
-                    <mxGeometry x="30" y="699" width="180" height="60" as="geometry"/>
+                <mxCell id="69" value="«Bucket S3»&lt;br&gt;&lt;b&gt;Upload Images&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="699" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="70" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="69" vertex="1">
                     <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="139" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="69" source="70" target="69">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="73" value="Offer Service" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" parent="1" vertex="1">
-                    <mxGeometry x="410" y="389" width="370" height="260" as="geometry"/>
+                    <mxGeometry x="410" y="389" width="360" height="260" as="geometry"/>
                 </mxCell>
                 <mxCell id="85" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=classic;endFill=1;endSize=8;" parent="1" source="74" target="76" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -230,11 +239,11 @@
                         <mxPoint x="-3" y="-9" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="87" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classic;endFill=1;endSize=8;" parent="1" source="74" target="78" edge="1">
+                <mxCell id="87" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classic;endFill=1;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="76" target="78" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="700" y="559"/>
-                            <mxPoint x="700" y="559"/>
+                            <mxPoint x="680" y="589"/>
+                            <mxPoint x="680" y="699"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -255,19 +264,17 @@
                         <mxPoint x="-8" y="-14" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="108" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=classic;endFill=1;endSize=8;" parent="1" source="74" target="109" edge="1">
+                <mxCell id="108" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=classic;endFill=1;endSize=8;" parent="1" source="74" target="12" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="980" y="649" as="targetPoint"/>
+                        <mxPoint x="1031" y="579" as="targetPoint"/>
                         <Array as="points">
                             <mxPoint x="760" y="479"/>
-                            <mxPoint x="760" y="549"/>
-                            <mxPoint x="1031" y="549"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="111" value="Use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="108" vertex="1" connectable="0">
                     <mxGeometry x="-0.0949" y="-5" relative="1" as="geometry">
-                        <mxPoint x="1" y="3" as="offset"/>
+                        <mxPoint x="-5" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="74" value="«Spring Boot»&lt;br&gt;&lt;b&gt;Microservice&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
@@ -278,7 +285,7 @@
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="76" value="«Library»&lt;br&gt;&lt;b&gt;Offer Core Library&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
+                <mxCell id="76" value="«Library»&lt;br&gt;&lt;b&gt;Spring Data DynamoDB&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
                     <mxGeometry x="470" y="559" width="180" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="77" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="76" vertex="1">
@@ -286,8 +293,8 @@
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="78" value="«Banco de Dados»&lt;br&gt;&lt;b&gt;Document DB&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
-                    <mxGeometry x="610" y="699" width="180" height="60" as="geometry"/>
+                <mxCell id="78" value="«Banco de Dados»&lt;br&gt;&lt;b&gt;DynamoDB&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="719" width="180" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="79" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="78" vertex="1">
                     <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
@@ -296,18 +303,6 @@
                 </mxCell>
                 <mxCell id="93" value="Search Service" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" parent="1" vertex="1">
                     <mxGeometry x="820" y="249" width="320" height="260" as="geometry"/>
-                </mxCell>
-                <mxCell id="100" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=classic;endFill=1;endSize=8;" parent="1" source="94" target="98" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1050" y="339"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="101" value="Use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="100" vertex="1" connectable="0">
-                    <mxGeometry x="0.468" y="1" relative="1" as="geometry">
-                        <mxPoint x="13" y="35" as="offset"/>
-                    </mxGeometry>
                 </mxCell>
                 <mxCell id="104" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=classic;endFill=1;endSize=8;" parent="1" source="94" target="96" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -325,7 +320,15 @@
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="96" value="«Library»&lt;br&gt;&lt;b&gt;Offer Core Library&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
+                <mxCell id="122" style="edgeStyle=none;html=1;entryX=0.586;entryY=1.083;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="96" target="98">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="122">
+                    <mxGeometry x="0.2621" y="-1" relative="1" as="geometry">
+                        <mxPoint y="63" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="96" value="«Library»&lt;br&gt;&lt;b&gt;Spring Data Elasticsearch&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
                     <mxGeometry x="930" y="419" width="180" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="97" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="96" vertex="1">
@@ -333,18 +336,10 @@
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="98" value="«Text Search»&lt;br&gt;&lt;b&gt;ElasticSearch&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
+                <mxCell id="98" value="«Text Search»&lt;br&gt;&lt;b&gt;AWS OpenSearch&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
                     <mxGeometry x="960" y="129" width="180" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="99" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="98" vertex="1">
-                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
-                        <mxPoint x="-27" y="7" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="109" value="«Image Store»&lt;br&gt;&lt;b&gt;Storage S3&lt;/b&gt;" style="html=1;dropTarget=0;" parent="1" vertex="1">
-                    <mxGeometry x="930" y="579" width="180" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="110" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="109" vertex="1">
                     <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
@@ -353,6 +348,129 @@
                     <mxGeometry x="160" y="145" width="160" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="116" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="115" vertex="1">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="124" value="«Message Service»&lt;br&gt;&lt;b&gt;SQS&lt;/b&gt;" style="html=1;dropTarget=0;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="800" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="124">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="130" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="128" target="124">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="215" y="830"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="131" value="Consumer &lt;br&gt;Create Offer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="130">
+                    <mxGeometry x="-0.6291" y="4" relative="1" as="geometry">
+                        <mxPoint x="-4" y="131" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="133" style="edgeStyle=none;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.128;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.891;entryY=-0.056;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="128" target="69">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="Use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="133">
+                    <mxGeometry x="-0.2319" y="3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="137" style="edgeStyle=none;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="128" target="135">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="Use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="137">
+                    <mxGeometry x="-0.0164" y="-3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="128" value="«Lambda»&lt;br&gt;&lt;b&gt;Mode Images&lt;/b&gt;" style="html=1;dropTarget=0;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="559" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="128">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="135" value="«Bucket S3»&lt;br&gt;&lt;b&gt;Offer Images&lt;/b&gt;" style="html=1;dropTarget=0;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="329" width="110" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="135">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="140" value="Store Functions" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" vertex="1" parent="1">
+                    <mxGeometry x="884" y="540" width="256" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" style="edgeStyle=none;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=0.905;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="142" target="146">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1110" y="610"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="155" value="Use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="148">
+                    <mxGeometry x="-0.7885" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="142" value="«Lambda»&lt;br&gt;&lt;b&gt;Create Store&lt;/b&gt;" style="html=1;dropTarget=0;" vertex="1" parent="1">
+                    <mxGeometry x="905" y="580" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="143" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="142">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="146" value="«Banco de Dados»&lt;br&gt;&lt;b&gt;DynamoDB&lt;/b&gt;" style="html=1;dropTarget=0;" vertex="1" parent="1">
+                    <mxGeometry x="949" y="820" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="147" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="146">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="151" style="edgeStyle=none;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=0.793;entryY=-0.019;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="149" target="146">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1090" y="679"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="156" value="Use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="151">
+                    <mxGeometry x="-0.8217" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="149" value="«Lambda»&lt;br&gt;&lt;b&gt;Get Store&lt;/b&gt;" style="html=1;dropTarget=0;" vertex="1" parent="1">
+                    <mxGeometry x="905" y="649" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="149">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="154" style="edgeStyle=none;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=0.671;entryY=-0.029;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="152" target="146">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1070" y="749"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="157" value="Use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="154">
+                    <mxGeometry x="-0.2642" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="152" value="«Lambda»&lt;br&gt;&lt;b&gt;Upload Store&lt;/b&gt;" style="html=1;dropTarget=0;" vertex="1" parent="1">
+                    <mxGeometry x="905" y="719" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="153" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="152">
                     <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
                         <mxPoint x="-27" y="7" as="offset"/>
                     </mxGeometry>
