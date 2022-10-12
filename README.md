@@ -1,4 +1,4 @@
-# README #
+# Projeto Integrado - Offer – Sistema de Ofertas em Lojas Físicas
 
 Esse repositório contendo documentos referente ao projeto de conclusão da pós graduação em arquitetura de software distribuído pela PUC Minas.
 
