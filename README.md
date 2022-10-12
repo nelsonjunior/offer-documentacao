@@ -15,7 +15,7 @@ Diagrama representando o contexto da aplicação Offer
 
 Diagrama representando os containers da aplicação Offer
 
-![alt text](./diagramas/DiagramaContainer.png "Title")
+![alt text](./drawio-assets/diagrama-container.png "Title")
 
 #### Component
 
